@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Бюджет студента</string>
+    <string name="tab_text_1">Отчёт</string>
+    <string name="tab_text_2">Доход</string>
+    <string name="tab_text_3">Расход</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_title">Бюджет студента</string>
+
+    <string name="action_year">Год</string>
+    <string name="action_month">Месяц</string>
+    <string name="action_week">Неделя</string>
+    <string name="action_day">День</string>
+    <string name="action_about">О программе</string>
+</resources>
