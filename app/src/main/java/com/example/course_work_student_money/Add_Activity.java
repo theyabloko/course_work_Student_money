@@ -39,14 +39,11 @@ public class Add_Activity extends AppCompatActivity {
     Cursor userCursor;
     long userId=0;
 
-    String[] Tag = {"Продукты", "Развлечения", "Образование", "Услуги", "Другое"};
+    String[] Tag = {"Стипендия","Подработка","Продукты", "Развлечения", "Образование", "Услуги", "Другое"};
     String Type="";
     String Tag_name ="";
 
     Calendar dateAndTime= Calendar.getInstance();
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,16 +57,8 @@ public class Add_Activity extends AppCompatActivity {
         delButton = (Button) findViewById(R.id.button_del);
         saveButton = (Button) findViewById(R.id.button_save);
 
-
-
-
-
-
         sqlHelper = new DBHelper(this);
         db = sqlHelper.getWritableDatabase();
-
-
-
 
 
         Bundle extras = getIntent().getExtras();
@@ -101,17 +90,19 @@ public class Add_Activity extends AppCompatActivity {
         // заголовок
         spinner.setPrompt("Title");
         // выделяем элемент
-        spinner.setSelection(4);
+        spinner.setSelection(6);
         // устанавливаем обработчик нажатия
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
-                if (position==0){Tag_name="Продукы";}
-                else if(position==1){Tag_name="Развлечения";}
-                else if(position==2){Tag_name="Образование";}
-                else if(position==3){Tag_name="Услуги";}
-                else if(position==4){Tag_name="Другое";}
+                if (position==0){Tag_name="Стипендия";}
+                else if(position==1){Tag_name="Подработка";}
+                else if(position==2){Tag_name="Продукты";}
+                else if(position==3){Tag_name="Развлечения";}
+                else if(position==4){Tag_name="Образование";}
+                else if(position==5){Tag_name="Услуги";}
+                else if(position==6){Tag_name="Другое";}
                 else{Tag_name="";}
 
                 // показываем позиция нажатого элемента
