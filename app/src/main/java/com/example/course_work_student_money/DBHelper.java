@@ -60,7 +60,7 @@ public class DBHelper extends SQLiteOpenHelper {
                     myOutput.write(buffer, 0, length);
                 }
 
-                myOutput.flush();
+                myOutput.flush(); //сбрасывает содержимое буфера в выходной поток и очищает его
                 myOutput.close();
                 myInput.close();
             }
