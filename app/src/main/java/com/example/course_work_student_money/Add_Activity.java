@@ -15,10 +15,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
 
 import java.util.Calendar;
 
@@ -42,6 +46,7 @@ public class Add_Activity extends AppCompatActivity {
     String[] Tag = {"Стипендия","Подработка","Продукты", "Развлечения", "Образование", "Услуги", "Другое"};
     String Type="";
     String Tag_name ="";
+    ImageView imageView;
 
     Calendar dateAndTime= Calendar.getInstance();
 
@@ -53,6 +58,11 @@ public class Add_Activity extends AppCompatActivity {
         NameEditText = (EditText) findViewById(R.id.editText_name);
         MoneyEditText = (EditText) findViewById(R.id.editText_money);
         DataEditText = (EditText) findViewById(R.id.editText_data);
+        imageView = (ImageView) findViewById(R.id.imageView);
+
+
+        Picasso.get().load("https://cdn.icon-icons.com/icons2/931/PNG/512/edit_modify_icon-icons.com_72390.png").placeholder(R.drawable.ic_swap_vert_black_24dp).error(R.drawable.ic_error_outline_black_24dp).into(imageView);
+
 
         delButton = (Button) findViewById(R.id.button_del);
         saveButton = (Button) findViewById(R.id.button_save);
@@ -194,11 +204,11 @@ public class Add_Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+/*
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }
+    } */
 }
